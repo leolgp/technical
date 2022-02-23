@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    padding: 1em;
+}
+
+.navbar{
+    position: fixed;
+    width: 270px;
+    font-family:'Permanent Marker', cursive; 
+}
+
+.main-doc{
+    position: relative;
+    left: 300px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: yellow;
+}
+
+h2{
+    margin-bottom: 15px;
+}
+
+.main-doc p, li, code{
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+code{
+    background-color: lightgray;
+    display: block;
+    padding: 10px;
+}
+
+
+.navbar ul li{
+    margin: 0;
+
+    list-style: none;
+    padding: .5em;
+    border: 1px solid goldenrod;
+    color: yellow;
+    background-color: rgb(3, 3, 105);
+
+}
+
+#reference{
+    background-color:
+}
