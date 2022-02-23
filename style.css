@@ -4,19 +4,23 @@
 }
 
 .container{
-    display: flex;
+    display: grid;
+    position: absolute;
     padding: 1em;
+    grid: "navbar main-doc" 300px, 1fr;
 }
 
-.navbar{
+#navbar{
     position: fixed;
     width: 270px;
     font-family:'Permanent Marker', cursive; 
+    z-index: 2;
 }
 
-.main-doc{
+#main-doc{
     position: relative;
-    left: 300px;
+    margin-left: 300px;
+    margin-top: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -25,12 +29,30 @@ a{
     color: yellow;
 }
 
+#reference a{
+    color: navy;
+    font-weight: 700;
+}
+
 h2{
     margin-bottom: 15px;
 }
 
-.main-doc p, li, code{
-    margin-left: 15px;
+#main-doc h2{
+    margin: 28px;
+}
+
+#main-doc p, code{
+    margin: 15px;
+}
+
+#main-doc li{
+    margin-left: 55px;
+    margin-bottom: 15px;
+}
+
+#main-doc .bolinha li {
+    margin-left: 95px;
     margin-bottom: 15px;
 }
 
@@ -38,14 +60,26 @@ code{
     background-color: lightgray;
     display: block;
     padding: 10px;
+    margin-left: 35px;
+
 }
 
 
-.navbar ul li{
+#navbar #titulo{
     margin: 0;
-
     list-style: none;
-    padding: .5em;
+    padding: .3em;
+    border: 1px solid goldenrod;
+    color: navy;
+    background-color: yellow;
+
+}
+
+
+#navbar ul li{
+    margin: 0;
+    list-style: none;
+    padding: .3em;
     border: 1px solid goldenrod;
     color: yellow;
     background-color: rgb(3, 3, 105);
@@ -54,4 +88,38 @@ code{
 
 #reference{
     background-color:
+}
+
+@media(max-width: 625px){
+   
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: static;
+        padding: 2em;        
+        text-align: center;
+
+    }
+
+    .container #navbar{
+        position: static;
+        display: block;
+        font-family:'Permanent Marker', cursive; 
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    #main-doc{
+        text-align: left;
+        display: block;
+        position: static;
+        margin-left: 0;
+        margin-top: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    
+
 }
